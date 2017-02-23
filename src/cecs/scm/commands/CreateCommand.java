@@ -78,7 +78,7 @@ public class CreateCommand implements Command {
 		ArtifactGenerator gen = new ArtifactGenerator();
 		try {
 			File artifact = gen.createArtifact(srcFile, leafFolder);
-			logger.writeLine(srcFolder + " " + artifact);
+			logger.writeLine(srcFile.getName() + " " + artifact.getName() + " " + leafFolder);
 			System.out.println("Created artifact: " + artifact);
 		} catch (IOException e) {
 			System.err.println("Could not create artifact for : " + srcFile);
