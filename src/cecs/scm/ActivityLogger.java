@@ -28,13 +28,15 @@ public class ActivityLogger {
 		activityFolder.mkdir();
 		
 		// make manifest
-		SimpleDateFormat fmt = new SimpleDateFormat("YYYY.MM.dd.hh.mm.ss");
-		String manifestFullName = MANIFEST_FILENAME + "." + fmt.format(new Date());
+		SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMdd_hhmmss");
+		String manifestFullName = MANIFEST_FILENAME + "_" + fmt.format(new Date());
 		manifest = new File(activityFolder + "\\" + manifestFullName);
 		
 		System.out.println("Maniest file created: " + manifest);
 		
 		writeLine(manifest.getName());
+		writeLine("Vix-1");
+		
 	}
 
 	/**

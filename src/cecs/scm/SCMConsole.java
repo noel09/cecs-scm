@@ -9,7 +9,7 @@ import cecs.scm.commands.CreateCommand;
  * The console user interface. Handles the user's inputs.
  */
 public class SCMConsole {
-
+	
 	public SCMConsole() {
 		initialize();
 	}

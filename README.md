@@ -1,17 +1,19 @@
 # cecs-scm
 A software code managmenet system
-## Team C?C
+## Team CKC
 * Vincent Cheong 
-* Imanuel 
+* Imanuel Kurniawan 
 * Douglas Choi
 
 CECS 543 - Section 01
 ## Introduction
+This project part is to form a development team and to build the first part of our SCM (Source Code Management) project (AKA a VCS: Version Control System). This part only implements an initial use-case: Create Repo. It also makes a number of simplifying assumptions in order to get to working S/W quickly. For background material, review on-line user documentation for Fossil, Git, and/or Subversion. Note, and “artifact” is a version of a file. The SCM repository will hold multiple versions of a given file, hence the original file name is not sufficient to distinguish between two of its artifacts; hence, within the repository we will use a code name for each artifact and will put all the artifacts of a particular file in a folder which has the original file's name.
 
 ## Requirements
-* Java 1.8 (?)
+* Java 1.8 
 
 ## Build, Installation, and Setup
+
 
 ## Usage
 
