@@ -1,9 +1,9 @@
 # cecs-scm
-A software code managmenet system
+A software code management system
 ## Team CKC
 * Vincent Cheong 
 * Imanuel Kurniawan 
-* Douglas Choi
+* Douglas Choi 
 
 CECS 543 - Section 01
 ## Introduction
@@ -11,12 +11,11 @@ This project part is to form a development team and to build the first part of o
 
 ## Requirements
 * Java 1.8 
+* Windows 7 or higher
 
-## Build, Installation, and Setup
-
+## Build
+* To compile: ```javac cecs/scm/Main.java```
+* To run: ```java cecs.scm.Main```
 
 ## Usage
-
-## Extra Features
-
-## Bugs
+* To create a repository: ```CREATE <source-project-directory> <repository-directory>```
