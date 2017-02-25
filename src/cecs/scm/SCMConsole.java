@@ -6,6 +6,12 @@ import cecs.scm.commands.Command;
 import cecs.scm.commands.CreateCommand;
 
 /**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
  * The console user interface. Handles the user's inputs.
  */
 public class SCMConsole {
