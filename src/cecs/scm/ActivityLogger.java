@@ -28,7 +28,7 @@ public class ActivityLogger {
 		activityFolder.mkdir();
 		
 		// make manifest
-		SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMdd_hhmmss");
+		SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMdd_hhmm");
 		String manifestFullName = MANIFEST_FILENAME + "_" + fmt.format(new Date());
 		manifest = new File(activityFolder + "\\" + manifestFullName);
 		
@@ -46,7 +46,7 @@ public class ActivityLogger {
 	public void writeLine(String line) {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(manifest, true));
-			writer.write(line + "\n");
+			writer.write(line + System.lineSeparator());
 			writer.close();
 		} catch (IOException e) {
 			e.printStackTrace();
