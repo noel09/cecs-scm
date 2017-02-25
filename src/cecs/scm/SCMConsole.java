@@ -36,7 +36,7 @@ public class SCMConsole {
 
 			Command command;
 			
-			if ("create".equals(args[0])) { // Create repo
+			if ("create".equalsIgnoreCase(args[0])) { // Create repo
 				if (args.length == 3) {
 					command = new CreateCommand(args[1], args[2]);
 					command.execute();
