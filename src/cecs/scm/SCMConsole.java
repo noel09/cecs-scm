@@ -33,21 +33,24 @@ public class SCMConsole {
 			String[] args = line.split(" ");
 			
 			// TODO: need to check user's inputs
-			
+
 			Command command;
 			
 			if ("create".equals(args[0])) { // Create repo
-				if (args.length != 3) { continue; }
-				command = new CreateCommand(args[1], args[2]);
-				
+				if (args.length == 3) {
+					command = new CreateCommand(args[1], args[2]);
+					command.execute();
+				}
+				else {
+					System.out.println("Invalid params.");
+				}
+
 			} else if ("exit".equals(args[0])) { // Exit case
 				break;
 				
 			} else { // Incorrect input
-				continue;
+				System.out.println("Invalid command.");
 			}
-			
-			command.execute();
 		}
 		sc.close();
 	}
