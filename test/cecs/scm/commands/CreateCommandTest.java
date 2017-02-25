@@ -2,6 +2,15 @@ package cecs.scm.commands;
 
 import org.junit.Test;
 
+/**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
+ * Tests the create repository command
+ */
 public class CreateCommandTest {
 
 	private String workingDir = "C:\\Users\\Douglas\\Workspace\\School\\CECS543\\cecs-scm\\samples";

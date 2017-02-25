@@ -8,6 +8,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
  * Logs the activity to the manifest file
  */
 public class ActivityLogger {

@@ -8,6 +8,15 @@ import java.io.PrintWriter;
 
 import org.junit.Test;
 
+/**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
+ * Unit test for the artifact name generator
+ */
 public class ArtifactGeneratorTest {
 
 	@Test

@@ -8,6 +8,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
+/**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
+ * Creates a new leaf folder and an artifact file of the old versions for each file
+ */
+
+
 public class ArtifactGenerator {
 
 	
