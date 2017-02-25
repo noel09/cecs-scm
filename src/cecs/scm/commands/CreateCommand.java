@@ -7,6 +7,12 @@ import cecs.scm.ActivityLogger;
 import cecs.scm.ArtifactGenerator;
 
 /**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ * 
+ * FILE DESCRIPTION:
  * Command to create a new repository from an existing source.
  */
 public class CreateCommand implements Command {
