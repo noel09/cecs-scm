@@ -19,3 +19,6 @@ This project part is to form a development team and to build the first part of o
 
 ## Usage
 * To create a repository: ```CREATE <source-project-directory> <repository-directory>```
+
+## Bugs
+* Spaces in file names currently does not work.
