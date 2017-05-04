@@ -38,7 +38,7 @@ public class ActivityLogger {
 		String manifestFullName = MANIFEST_FILENAME + "_" + fmt.format(new Date());
 		manifest = new File(activityFolder + "\\" + manifestFullName);
 		
-		System.out.println("Maniest file created: " + manifest);
+		System.out.println("Manifest file created: " + manifest);
 		
 		writeLine(manifest.getName());
 		writeLine("Vix-1");
