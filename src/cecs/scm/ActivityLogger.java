@@ -30,13 +30,14 @@ public class ActivityLogger {
 	 */
 	public ActivityLogger(String repoRootFolder) {
 		// make activity folder
-		File activityFolder = new File(repoRootFolder + "\\" + ACTIVITY_FOLDER_NAME);
-		activityFolder.mkdir();
+		File activityFolder = new File(repoRootFolder + File.separator + ACTIVITY_FOLDER_NAME);
+		activityFolder.mkdirs();
 		
 		// make manifest
 		SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMdd_hhmm");
 		String manifestFullName = MANIFEST_FILENAME + "_" + fmt.format(new Date());
-		manifest = new File(activityFolder + "\\" + manifestFullName);
+		
+		manifest = new File(activityFolder + File.separator + manifestFullName);
 		
 		System.out.println("Manifest file created: " + manifest);
 		
