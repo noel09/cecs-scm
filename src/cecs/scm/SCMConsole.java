@@ -35,9 +35,11 @@ public class SCMConsole {
 			String[] args = line.split(" ");
 			
 			// TODO: need to check user's inputs
-
+			
 			Command command;
 			
+			// TODO: For error handling, we probably want avoid 
+			// repeating error outputs. Consider using Exceptions?
 			if ("create".equalsIgnoreCase(args[0])) { // Create repo
 				if (args.length == 3) {
 					command = new CreateCommand(args[1], args[2]);
@@ -53,8 +55,12 @@ public class SCMConsole {
 					System.out.println("Invalid params.");
 				}
 			} else if ("list".equalsIgnoreCase(args[0])) { // List versions
-				command = new ListCommand();
-				command.execute();
+				if (args.length == 2) {
+					command = new ListCommand(args[1]);
+					command.execute();
+				} else {
+					System.out.println("Invalid params.");
+				}
 			} else if ("exit".equals(args[0])) { // Exit case
 				break;
 				
