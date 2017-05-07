@@ -18,8 +18,8 @@ import java.util.Date;
  */
 public class ActivityLogger {
 	
-	private static String ACTIVITY_FOLDER_NAME = "activity";
-	private static String MANIFEST_FILENAME = "manifest";
+	public static String ACTIVITY_FOLDER_NAME = "activity";
+	public static String MANIFEST_FILENAME = "manifest";
 	
 	private File manifest;
 	
