@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import cecs.scm.commands.Command;
 import cecs.scm.commands.CreateCommand;
+import cecs.scm.commands.ListCommand;
 import cecs.scm.commands.CheckoutCommand;
 
 /**
@@ -44,13 +45,16 @@ public class SCMConsole {
 				} else {
 					System.out.println("Invalid params.");
 				}
-			} else if ("checkout".equalsIgnoreCase(args[0])) {
+			} else if ("checkout".equalsIgnoreCase(args[0])) { // Checkout 
 				if (args.length == 4) {
 					command = new CheckoutCommand(args[1], args[2], args[3]);
 					command.execute();
 				} else {
 					System.out.println("Invalid params.");
 				}
+			} else if ("list".equalsIgnoreCase(args[0])) { // List versions
+				command = new ListCommand();
+				command.execute();
 			} else if ("exit".equals(args[0])) { // Exit case
 				break;
 				

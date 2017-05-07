@@ -61,7 +61,7 @@ public class CreateCommand implements Command {
 		File[] files = srcTree.listFiles();
 		for (File f : files) {
 			// create a subfolder
-			File subFolder = new File(repoRoot + "\\" + f.getName());
+			File subFolder = new File(repoRoot + File.separator + f.getName());
 			subFolder.mkdir();
 
 			if (f.isDirectory()) {

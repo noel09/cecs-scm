@@ -32,7 +32,8 @@ public class CheckoutCommand implements Command {
         this.repoFolder = repoFolder;
         this.tgtFolder = tgtFolder;
         this.manifestDateTime = manifestDateTime;
-        manifest = repoFolder + "\\activity\\manifest_" + manifestDateTime;
+        manifest = repoFolder + File.separator + "activity" +
+        						File.separator + "manifest_" + manifestDateTime;
     }
 
     @Override
@@ -63,16 +64,22 @@ public class CheckoutCommand implements Command {
      * Processes each line of the manifest. Stops if it hits an empty line or if reaches end of file.
      */
     private void processManifest() {
+    	BufferedReader reader = null;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(manifest));
+            reader = new BufferedReader(new FileReader(manifest));
             String line;
             while ((line = reader.readLine()) != null) {
-                if (line.isEmpty())
+                if (line.isEmpty()) {
                     return;
+                }
                 processLine(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+        	if (reader != null) { 
+        		try { reader.close(); } catch (IOException e) {} 
+        	}
         }
     }
 
@@ -92,7 +99,7 @@ public class CheckoutCommand implements Command {
         // token[1] = original file name
         // token[2] = artifact file name
         // token[3] = target location
-        String repoStr = token[3] + "\\" + token[2]; // "...\subfolder\file.txt\1.1.txt"
+        String repoStr = token[3] + File.separator + token[2]; // "...\subfolder\file.txt\1.1.txt"
         String localPath = token[3].replace(repoFolder, ""); // Extract local hierarchy: "\subfolder\file.txt"
         String tgtStr = tgtFolder + localPath;
 
