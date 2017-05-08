@@ -67,7 +67,10 @@ public class ArtifactGenerator {
 	public File createArtifact(File srcFile, File leafFolder) throws IOException {
 		
 		// Create a new artifact file
-		File artifactFile = new File(leafFolder + "\\" + generateName(srcFile));
+		if (!leafFolder.exists()) {
+			leafFolder.mkdir();
+		}
+		File artifactFile = new File(leafFolder + File.separator + generateName(srcFile));
 		
 		// copy the file
 		InputStream is = new FileInputStream(srcFile);

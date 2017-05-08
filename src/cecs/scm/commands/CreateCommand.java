@@ -61,7 +61,7 @@ public class CreateCommand implements Command {
 		File[] files = srcTree.listFiles();
 		for (File f : files) {
 			// create a subfolder
-			File subFolder = new File(repoRoot + "\\" + f.getName());
+			File subFolder = new File(repoRoot + File.separator + f.getName());
 			subFolder.mkdir();
 
 			if (f.isDirectory()) {
@@ -84,7 +84,7 @@ public class CreateCommand implements Command {
 		ArtifactGenerator gen = new ArtifactGenerator();
 		try {
 			File artifact = gen.createArtifact(srcFile, leafFolder);
-			logger.writeLine(srcFile.getName() + " " + artifact.getName() + " " + leafFolder);
+			logger.writeLine("> " + srcFile.getName() + " " + artifact.getName() + " " + leafFolder);
 			System.out.println("Created artifact: " + artifact);
 		} catch (IOException e) {
 			System.err.println("Could not create artifact for : " + srcFile);

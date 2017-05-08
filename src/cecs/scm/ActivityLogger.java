@@ -18,8 +18,8 @@ import java.util.Date;
  */
 public class ActivityLogger {
 	
-	private static String ACTIVITY_FOLDER_NAME = "activity";
-	private static String MANIFEST_FILENAME = "manifest";
+	public static String ACTIVITY_FOLDER_NAME = "activity";
+	public static String MANIFEST_FILENAME = "manifest";
 	
 	private File manifest;
 	
@@ -30,15 +30,16 @@ public class ActivityLogger {
 	 */
 	public ActivityLogger(String repoRootFolder) {
 		// make activity folder
-		File activityFolder = new File(repoRootFolder + "\\" + ACTIVITY_FOLDER_NAME);
-		activityFolder.mkdir();
+		File activityFolder = new File(repoRootFolder + File.separator + ACTIVITY_FOLDER_NAME);
+		activityFolder.mkdirs();
 		
 		// make manifest
 		SimpleDateFormat fmt = new SimpleDateFormat("YYYYMMdd_hhmm");
 		String manifestFullName = MANIFEST_FILENAME + "_" + fmt.format(new Date());
-		manifest = new File(activityFolder + "\\" + manifestFullName);
 		
-		System.out.println("Maniest file created: " + manifest);
+		manifest = new File(activityFolder + File.separator + manifestFullName);
+		
+		System.out.println("Manifest file created: " + manifest);
 		
 		writeLine(manifest.getName());
 		writeLine("Vix-1");
