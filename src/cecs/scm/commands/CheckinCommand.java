@@ -6,75 +6,22 @@ import cecs.scm.ArtifactGenerator;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by ImanuelK09 on 5/9/17.
- */
-public class CheckinCommand implements Command {
-
-    private String srcFolder;
-    private String repoFolder;
-    private ActivityLogger logger;
-
+public class CheckinCommand extends CopyFile implements Command {
     /**
      * @param srcFolder: Root directory of the source
      * @param repoFolder: Root directory of the repository
      */
     public CheckinCommand(String srcFolder, String repoFolder) {
-        this.srcFolder = srcFolder;
-        this.repoFolder = repoFolder;
+        super(srcFolder, repoFolder);
     }
 
     @Override
     public void execute() {
-        // Make repo directory if doesn't exist
-        File repoFile = new File(repoFolder);
-        if (!repoFile.exists()) {
-            repoFile.mkdirs();
-        }
-
-        // create manifest
-        logger = new ActivityLogger(repoFolder);
-        logger.writeLine("CHECK-IN " + srcFolder + " " + repoFolder);
-
-        // TODO: check if src folder exists
-        File srcFile = new File(srcFolder);
-        System.out.println("Copying source directory: " + srcFile);
-
-        // TODO: check if the repo folder contains contents
-        System.out.println("Writing to repository directory: " + repoFolder);
-        traverseTree(srcFile, repoFolder);
+        CloneFiles("check-in");
     }
 
-    /**
-     * Recursively traverse the file tree
-     * @param srcTree
-     * @param repoRoot
-     */
-    private void traverseTree(File srcTree, String repoRoot) {
-        // Iterate through each file
-        File[] files = srcTree.listFiles();
-        for (File f : files) {
-            // create a subfolder
-            File subFolder = new File(repoRoot + File.separator + f.getName());
-            subFolder.mkdir();
-
-            if (f.isDirectory()) {
-                // Continue down the tree
-                traverseTree(f, subFolder.getAbsolutePath());
-            } else {
-                // Handle as a file
-                processFile(f, subFolder);
-            }
-        }
-    }
-
-    /**
-     * Creates a new leaf folder containing the artifacts of the original file,
-     * logs the activity to the manifest file
-     * @param srcFile
-     * @param leafFolder
-     */
-    private void processFile(File srcFile, File leafFolder) {
+    @Override
+    protected void processFile(File srcFile, File leafFolder) {
         ArtifactGenerator gen = new ArtifactGenerator();
         try {
             File artifact = new File(leafFolder + File.separator + gen.generateName(srcFile));
@@ -88,5 +35,4 @@ public class CheckinCommand implements Command {
             System.err.println("Could not create artifact for : " + srcFile);
         }
     }
-
 }
