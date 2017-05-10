@@ -2,10 +2,7 @@ package cecs.scm;
 
 import java.util.Scanner;
 
-import cecs.scm.commands.Command;
-import cecs.scm.commands.CreateCommand;
-import cecs.scm.commands.ListCommand;
-import cecs.scm.commands.CheckoutCommand;
+import cecs.scm.commands.*;
 
 /**
  * AUTHORS:
@@ -47,7 +44,15 @@ public class SCMConsole {
 				} else {
 					System.out.println("Invalid params.");
 				}
-			} else if ("checkout".equalsIgnoreCase(args[0])) { // Checkout 
+			} else if("checkin".equalsIgnoreCase(args[0])){
+				if (args.length == 3) {
+					command = new CheckinCommand(args[1], args[2]);
+					command.execute();
+				} else {
+					System.out.println("Invalid params.");
+				}
+			}
+			else if ("checkout".equalsIgnoreCase(args[0])) { // Checkout
 				if (args.length == 4) {
 					command = new CheckoutCommand(args[1], args[2], args[3]);
 					command.execute();
