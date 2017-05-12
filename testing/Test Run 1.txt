@@ -1,0 +1,14 @@
+checkin C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo\activity\manifest_20170511_1158
+	Copying source directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt
+	Writing to repository directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo\h.txt\72.1.txt
+
+list C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo
+	20170511_1158
+
+checkout C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout 20170511_1158
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo\activity\manifest_20170511_1159
+	Checking-out manifest: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo\activity\manifest_20170511_1158
+	Writing to target directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout
+	Copied file: h.txt
