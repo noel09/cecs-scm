@@ -12,7 +12,7 @@ import cecs.scm.ActivityLogger;
  * 3. Vincent Cheong 	- vincentkcheong@gmail.com
  *
  * FILE DESCRIPTION:
- * Command to create a new repository from an existing source.
+ * Command to retrieve project from existing repository
  */
 
 public class CheckoutCommand implements Command {

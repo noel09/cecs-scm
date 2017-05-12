@@ -17,15 +17,16 @@ import cecs.scm.ArtifactGenerator;
  */
 public class CreateCommand extends CopyFile implements Command{
 	/**
+	 * Constructor
 	 * @param srcFolder: Root directory of the source
 	 * @param repoFolder: Root directory of the repository
 	 */
 	public CreateCommand(String srcFolder, String repoFolder) {
 		super(srcFolder, repoFolder);
-	}
+	}//End constructor
 	
 	@Override
 	public void execute() {
 		CloneFiles("create");
-	}
-}
+	}//End execute()
+}//End class

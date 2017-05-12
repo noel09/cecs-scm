@@ -2,9 +2,18 @@ package cecs.scm.commands;
 
 import cecs.scm.ActivityLogger;
 import cecs.scm.ArtifactGenerator;
-
 import java.io.File;
 import java.io.IOException;
+
+/**
+ * AUTHORS:
+ * 1. Douglas Choi 		- douglchoi@gmail.com
+ * 2. Imanuel Kurniawan - imanuel.k09@hotmail.com
+ * 3. Vincent Cheong 	- vincentkcheong@gmail.com
+ *
+ * FILE DESCRIPTION:
+ * Command to copy files from source directory to target directory
+ */
 
 public class CopyFile {
 
@@ -22,7 +31,7 @@ public class CopyFile {
      * @param srcTree
      * @param repoRoot
      */
-    protected void traverseTree(File srcTree, String repoRoot) {
+    private void traverseTree(File srcTree, String repoRoot) {
         // Iterate through each file
         File[] files = srcTree.listFiles();
         for (File f : files) {
@@ -77,4 +86,4 @@ public class CopyFile {
         System.out.println("Writing to repository directory: " + repoFolder);
         traverseTree(srcFile, repoFolder);
     }
-}
+}//End class
