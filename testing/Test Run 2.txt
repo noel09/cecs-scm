@@ -1,0 +1,15 @@
+checkin C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt2 C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\activity\manifest_20170512_1201
+	Copying source directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt2
+	Writing to repository directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\goodbye.txt\6604.9.txt
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\h.txt\72.1.txt
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\hello.txt\7988.11.txt
+
+checkout C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2 C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout2 20170512_1201
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\activity\manifest_20170512_1202
+	Checking-out manifest: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo2\activity\manifest_20170512_1201
+	Writing to target directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout2
+	Copied file: goodbye.txt
+	Copied file: h.txt
+	Copied file: hello.txt

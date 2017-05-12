@@ -1,0 +1,15 @@
+checkin C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt3 C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\activity\manifest_20170512_1203
+	Copying source directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\mypt3
+	Writing to repository directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\h.txt\72.1.txt
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\src\darn.fool\59342.81.fool
+	Recorded artifact: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\src\main.fool\14939.22.fool
+
+checkout C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3 C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout3 20170512_1203
+	Manifest file created: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\activity\manifest_20170512_1204
+	Checking-out manifest: C:\Users\Vince\IdeaProjects\cecs-scm\testing\repo3\activity\manifest_20170512_1203
+	Writing to target directory: C:\Users\Vince\IdeaProjects\cecs-scm\testing\chkout3
+	Copied file: h.txt
+	Copied file: darn.fool
+	Copied file: main.fool

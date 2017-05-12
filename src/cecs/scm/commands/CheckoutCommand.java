@@ -91,6 +91,9 @@ public class CheckoutCommand implements Command {
         String delimiter = "[ ]+"; // Split tokens by white spaces
         String[] token = line.split(delimiter);
 
+        if (token.length != 4) // Ensure valid input
+            return;
+
         if (!token[0].equals(">")) // Do nothing unless it's a copied file
             return;
 
